@@ -1,5 +1,6 @@
 import './App.sass'
 import Header from "../components/Header/Header"
+import AnimalList from '../components/AnimalList/AnimalList';
 import { useLoaderData } from 'react-router'
 
 interface Dog {
@@ -20,12 +21,7 @@ export default function App() {
   return (
     <div>
       <Header />
-      <h1>Dog List</h1>
-      <ul>
-        {dogs.map(dog => (
-          <li key={dog.id}>{dog.breed}</li>
-        ))}
-      </ul>
+      <AnimalList data={dogs}/>
     </div>
   );
 }

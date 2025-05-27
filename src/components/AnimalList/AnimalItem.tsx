@@ -1,15 +1,7 @@
 import './AnimalItem.sass'
 import { Link } from "react-router"
 import { FaLocationDot, FaRulerCombined } from "react-icons/fa6";
-
-interface Dog {
-  id: string;
-  breed: string;
-  image: string;
-  location: string;
-  size: string;
-  short_description: string;
-}
+import type { Dog } from '../../types/dogs';
 
 interface AnimalItemProps {
   data: Dog;

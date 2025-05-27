@@ -2,12 +2,7 @@ import './App.sass'
 import Header from "../components/Header/Header"
 import AnimalList from '../components/AnimalList/AnimalList';
 import { useLoaderData } from 'react-router'
-
-interface Dog {
-  id: string;
-  breed: string;
-  image: string;
-}
+import type { Dog } from '../types/dogs';
 
 export async function appLoader() {
   const res = await fetch('http://localhost:4000/dogs');

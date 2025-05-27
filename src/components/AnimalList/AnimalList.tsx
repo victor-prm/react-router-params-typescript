@@ -1,15 +1,6 @@
 import './AnimalList.sass'
 import AnimalItem from "./AnimalItem"
-
-interface Dog {
-  id: string;
-  breed: string;
-  image: string;
-  location: string;
-  size: string;
-  short_description: string;
-}
-
+import type { Dog } from '../../types/dogs';
 
 interface AnimalListProps {
   data: Dog[];

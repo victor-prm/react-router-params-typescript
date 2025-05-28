@@ -21,7 +21,7 @@ export default function App() {
   const filteredDogs = filter === 'all' ? dogs : dogs.filter(dog => dog.size === filter);
 
   return (
-    <div>
+    <div className='root-app'>
       <Header />
       <FilterButtons onFilter={setFilter}></FilterButtons>
       <AnimalList data={filteredDogs} />

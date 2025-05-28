@@ -5,4 +5,6 @@ export type Dog = {
   location: string;
   size: string;
   short_description: string;
+  long_description: string;
+  gender: string;
 }

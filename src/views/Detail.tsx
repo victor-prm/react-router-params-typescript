@@ -1,6 +1,7 @@
 import './Detail.sass'
 import { useLoaderData} from 'react-router';
 import type { Dog } from '../types/dogs';
+import DetailCard from '../components/DetailCard/DetailCard';
 
 export async function detailLoader({ params }: { params: any }) {
   const res = await fetch(`http://localhost:4000/dogs/${params.id}`);
@@ -13,8 +14,7 @@ export default function DetailPage() {
 
   return (
     <div>
-      <h1>{dog.breed}</h1>
-      <img src={dog.image} alt={dog.breed} />
+      <DetailCard data={dog}/>
     </div>
   );
 }
